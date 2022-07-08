@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    DOCKERHUB_USER = "msuzuki0810"
+    DOCKERHUB_USER = "mitsu_s0810"
     BUILD_HOST = "root@10.211.55.33"
     PROD_HOST = "root@10.211.55.34"
     BUILD_TIMESTAMP = sh(script: "date +%Y%m%d-%H%M%S", returnStdout: true).trim()
@@ -10,7 +10,7 @@ pipeline {
     stage('Pre Check') {
       steps {
         sh "test -f ~/.docker/config.json"
-        sh "cat ~/.docker/config.json | grep docker.io"
+        sh "cat ~/.docker/config.json | grep quay.io"
       }
     }
     stage('Build') {
