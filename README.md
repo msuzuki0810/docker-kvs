@@ -8,5 +8,5 @@ https://github.com/yuichi110/docker-kvs
 https://github.com/yuichi110/docker-kvs
 
 
-testchange
+test
 >>>>>>> Stashed changes
